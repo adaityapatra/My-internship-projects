@@ -1,0 +1,22 @@
+import java.util.HashMap;
+
+public class LinkShortener {
+    private HashMap<String, String> urlMap = new HashMap<>();
+
+    public String shortenURL(String longURL) {
+        String shortIdentifier = generateShortIdentifier(longURL);
+        urlMap.put(shortIdentifier, longURL);
+        return shortIdentifier;
+    }
+
+    public String getLongURL(String shortIdentifier) {
+        return urlMap.get(shortIdentifier);
+    }
+
+    private String generateShortIdentifier(String longURL) {
+        // Implement your logic to generate a short identifier
+        // This can be a hash function or any other method to ensure uniqueness.
+        // Ensure that the generated identifier is unique.
+        return "generated_short_identifier";
+    }
+}
